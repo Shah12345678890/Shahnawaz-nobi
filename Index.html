@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiranga Prediction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #2e2e2e;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #ff4c4c;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .future-prediction-box {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #00cc99;
+            margin-bottom: 10px;
+        }
+
+        .prediction-result {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        .footer p {
+            font-size: 14px;
+            margin-top: 20px;
+            color: #00cc99;
+        }
+
+        .footer {
+            border-top: 1px solid #444;
+            padding-top: 10px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            background-color: #00cc99;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Tiranga Server Hacked!</h1>
+
+    <div class="future-prediction-box">
+        <h2>Next Result Prediction:</h2>
+        <div class="prediction-result" id="prediction">
+            <!-- JavaScript will handle this -->
+        </div>
+    </div>
+
+    <form id="predictionForm">
+        <button type="button" id="winBtn" class="button">Win</button>
+        <button type="button" id="outBtn" class="button">Out</button>
+    </form>
+
+    <div class="footer">
+        <p>80% - 90% Accurate Big or Small Prediction<br>
+           NOTE ⚠️: THIS IS PAID HACK ✔️✔️<br>
+           FULL CREDIT TO = SHAHNAWAZ KHAN HACKER 💀💀💀💀</p>
+    </div>
+</div>
+
+<script>
+    // Function to predict 'Big' or 'Small' based on current time
+    function predictFuture() {
+        const currentTime = new Date().getTime();
+        return currentTime % 2 === 0 ? 'Big' : 'Small';
+    }
+
+    // Function to determine final result based on Win or Out
+    function determineResult(prediction, isWin) {
+        return isWin ? prediction : (prediction === 'Big' ? 'Small' : 'Big');
+    }
+
+    // Initial prediction
+    let prediction = predictFuture();
+    document.getElementById('prediction').innerText = prediction;
+
+    // Add event listeners for the buttons
+    document.getElementById('winBtn').addEventListener('click', function() {
+        const finalResult = determineResult(prediction, true); // 'Win' button clicked
+        document.getElementById('prediction').innerText = finalResult;
+    });
+
+    document.getElementById('outBtn').addEventListener('click', function() {
+        const finalResult = determineResult(prediction, false); // 'Out' button clicked
+        document.getElementById('prediction').innerText = finalResult;
+    });
+</script>
+
+</body>
+      </html>
+      
